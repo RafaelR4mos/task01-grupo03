@@ -3,5 +3,5 @@
 🔵 Componentes do grupo
 
 -   **Gabriel Kleiman** - QA
--   **Luis Gustavo** - QA
+-   **Luis de Paula** - QA
 -   **Rafael Ramos** - Front-end

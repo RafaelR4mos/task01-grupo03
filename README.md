@@ -1,6 +1,6 @@
 # Comandos GIT
 
-🔵 Desenvolvido por: Alunos do **programa Vem Ser 11ª edição** . [Saiba mais!](./README-INFO.md)
+🔵 Desenvolvido por: Alunos do **programa Vem Ser 11ª edição** . [Saiba mais!](README-info.md)
 
 > Aprenda sobre alguns dos comandos git que podem passar despercebidos por desenvolvedores, mas que ao mesmo tempo podem ser um fator determinante entre essoas que sabem git ou não.
 
@@ -97,4 +97,4 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ---
 
-by 🔵 [Alunos Vem Ser 11ª edição](./README-INFO.md)
+by 🔵 [Alunos Vem Ser 11ª edição](README-INFO.md)
