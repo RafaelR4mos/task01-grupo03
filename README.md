@@ -97,4 +97,4 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ---
 
-by 🔵 [Alunos Vem Ser 11ª edição](README-INFO.md)
+by 🔵 [Alunos Vem Ser 11ª edição](README-info.md)
