@@ -6,22 +6,22 @@
 
 **Lista de comandos**:
 
-- [Rebase](#Rebase)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Cherry Pick](#Cherry-Pick)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Revert](#Revert)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Squash](#Squash)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
+-   [Rebase](#Rebase)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Cherry Pick](#Cherry-Pick)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Revert](#Revert)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Squash](#Squash)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
 
 ## Rebase
 
@@ -170,7 +170,7 @@ Se eu quero alterar a branch <feat/to-do-list-TK002> a sintaxe do comando ficar�
 **Exemplo de uso:**
 
 Esse comando pode ser aplicado para diminuir o número de commits em um só.
-Caso o código de uma certa brnach já esteja com muitos commits o squash pode ser usado para simplificá-los e transformar todos em um só commit na main.
+Caso o código de uma certa branch já esteja com muitos commits o squash pode ser usado para simplificá-los e transformar todos em um só commit na main.
 
 ---
 
