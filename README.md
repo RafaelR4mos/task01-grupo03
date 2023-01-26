@@ -27,9 +27,9 @@
 
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+O comando **git rebase** permite que você transfira seus commits de um branch para outro diferente. Isso pode ser útil para sincronizar o seu trabalho com as alterações recentes ou para resolver conflitos antes de realizar o merge.
 
-**Comando: Sintaxe completa**
+**Sintaxe**
 
 ```md
 git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]
@@ -37,22 +37,27 @@ git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>] --
 git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
 ```
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-
 **Exemplo de uso:**
+
 Você está há algum tempo sem trabalhar em uma branch e está se tornou desatualizada em relação a branch main, conforme a seguinte ilustação:
 ```
           A---B---C topic
          /
-    D---E---F---G master
+    D---E---F---G main
 ```
 Podendo assim utilizar o git rebase para realocar sua branch e seus commits em relação a main e os commits mais atuais:
 ```
-git rebase master
-git rebase master topic
+git checkout topic
+git rebase main
 ```
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Assim, podemos visualizar a nova disposição desta branch conforme a seguinte ilustração:
+```
+                  A'--B'--C' topic
+                 /
+    D---E---F---G main
+```
+Existem outras aplicações para este comando ao explorar seus parâmetros como transferir uma ramificação de uma para outra branch com a opção rebase --onto, contando com a possibilidade de realizar correções em caso de conflitos ou desistir da operação. Pode verificar estes e outros exemplos em https://git-scm.com/docs/git-rebase .
 
 ## Cherry Pick
 
