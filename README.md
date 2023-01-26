@@ -6,22 +6,22 @@
 
 **Lista de comandos**:
 
-- [Rebase](#Rebase)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Cherry Pick](#Cherry-Pick)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Revert](#Revert)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
-- [Squash](#Squash)
-  - Definição
-  - Sintaxe
-  - Exemplos de uso
+-   [Rebase](#Rebase)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Cherry Pick](#Cherry-Pick)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Revert](#Revert)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
+-   [Squash](#Squash)
+    -   Definição
+    -   Sintaxe
+    -   Exemplos de uso
 
 ## Rebase
 
@@ -68,19 +68,52 @@ Existem outras aplicações para este comando ao explorar seus parâmetros como 
 
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+O comando `git cherry-pick ` possibilita selecionar commits de sua escolha, vindos de uma branch diferente sendo simplesmente baseado na ação de selecionar um commit de uma branch e aplicar a outra. Através do nome "Pegar Cereja", do inglês "Cherry Pick", é possível fazer uma analogia em que: **Apenas** a cereja (commit) é retirada de um bolo (branch) e transferida para outro.
 
-**Comando**
+Antes do Cherry Pick:
 
-```md
-git checkout -b <nome-da-branch> //Exemplo
+```
+   a - b - c - d   Main
+         \
+           e - f - g Feature
+
 ```
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+Após execução do comando, aplicando o _pick_ em 'f':
 
-**Exemplo de uso:**
+```
+    a - b - c - d - f   Main
+         \
+           e - f - g Feature
+```
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+### **Sintaxe**
+
+```
+git cherry-pick <commitSha> // Onde, "commitSha" é a referência do commit
+```
+
+> NOTE: A referência do commit pode ser obtida através do comando `git log` que retorna algo como:
+
+```
+commit 146ab86f964d266e7e8edebfb152fda269ccd7cd
+Author: Joe <joedoe@example.com>
+Date:   Wed Jan 25 20:11:15 2023 -0300
+```
+
+obs: A informação necessária é o **identificador** ao lado de _commit_
+
+> NOTE: lembre-se de estar na branch em que deseja transferir o commit selecionado através do cherry pick. Para trocar de branch `git checkout <nome-da-branch> `
+
+Já na branch desejada e com o identificador do commit a ser selecionado digite, por exemplo:
+
+```
+git cherry-pick 146ab86f964d266e7e8edebfb152fda269ccd7cd
+```
+
+### **Aplicação**
+
+Por mais que o Cherry Pick possa "burlar" as regras do git flow ele pode ser uma ótima ferramenta para realizar ajustes rápidos extraindo somente alguns trechos de código para outras branch em um processo relativamente simples e sem precisar executar merges e etc. Entretanto não é recomendado utilizar este comando em ambientes de trabalho com git flow definidos.
 
 ## Revert
 
@@ -137,7 +170,7 @@ Se eu quero alterar a branch <feat/to-do-list-TK002> a sintaxe do comando ficar�
 **Exemplo de uso:**
 
 Esse comando pode ser aplicado para diminuir o número de commits em um só.
-Caso o código de uma certa brnach já esteja com muitos commits o squash pode ser usado para simplificá-los e transformar todos em um só commit na main.
+Caso o código de uma certa branch já esteja com muitos commits o squash pode ser usado para simplificá-los e transformar todos em um só commit na main.
 
 ---
 
